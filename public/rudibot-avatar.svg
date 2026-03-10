@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Robot body - light blue oval -->
+  <ellipse cx="100" cy="120" rx="80" ry="60" fill="#dbeafe" stroke="#1e40af" stroke-width="6"/>
+  
+  <!-- Inner face screen -->
+  <rect x="50" y="90" width="100" height="60" rx="30" fill="#bfdbfe" stroke="#1e40af" stroke-width="4"/>
+  
+  <!-- Eyes -->
+  <circle cx="75" cy="115" r="8" fill="#000"/>
+  <circle cx="125" cy="115" r="8" fill="#000"/>
+  
+  <!-- Smile -->
+  <path d="M 80 130 Q 100 140 120 130" stroke="#000" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Antenna -->
+  <line x1="100" y1="60" x2="100" y2="30" stroke="#1e40af" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="100" cy="25" r="10" fill="#1e40af"/>
+  
+  <!-- Decorative elements - stars/planets -->
+  <circle cx="30" cy="80" r="4" fill="#93c5fd"/>
+  <circle cx="170" cy="100" r="5" fill="#93c5fd"/>
+  <circle cx="40" cy="140" r="3" fill="#93c5fd"/>
+  <circle cx="160" cy="140" r="4" fill="#93c5fd"/>
+  
+  <!-- Small stars -->
+  <path d="M 45 60 L 47 65 L 43 65 Z" fill="#60a5fa"/>
+  <path d="M 155 75 L 157 80 L 153 80 Z" fill="#60a5fa"/>
+</svg>

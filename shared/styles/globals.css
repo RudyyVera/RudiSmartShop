@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@font-face {
+  font-family: vazir;
+  src: url("/fonts/vazir/Vazir-Regular-FD.eot") format("eot");
+   src: url("/fonts/vazir/Vazir-Regular-FD.woff") format("woff"),
+    url("/fonts/vazir/Vazir-Regular-FD.woff2") format("woff2"),
+      url("/fonts/vazir/Vazir-Regular-FD.ttf") format("truetype");
+}
+@font-face {
+  font-family: tanha;
+  src: url("/fonts/tanha/Tanha-WOL.eot") format("eot");
+  src:  url("/fonts/tanha/Tanha-WOL.woff") format("woff"),
+    url("/fonts/tanha/Tanha-WOL.woff2") format("woff2"),
+      url("/fonts/tanha/Vazir-Regular-FD.ttf") format("truetype");
+}
+
+.font-en {
+  font-family: "Roboto", sans-serif;
+}
+/* .font-en .curier {
+  font-family: "Courier Prime", monospace !important;
+} */
+.font-fa {
+  font-family: vazir;
+}
+.font-fa .curier{
+  font-family: tanha;
+}
+
+.dark {
+  /* True Black Vercel Aesthetic */
+  --color-bg-primary: #0b0e14;
+  --color-bg-secondary: #1a1d26;
+  --color-bg-three: #2a2d36;
+  --color-bg-hover: #1a1a1a;
+  --color-bg-primary-cont: #ffffff;
+  --color-bg-secondary-cont: #f5f5f5;
+  --color-bg-hover-cont: #262626;
+
+  /* Text Colors - Pure White & Neutral Gray */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e5e5e5;
+  --color-text-third: #a3a3a3;
+  --color-text-primary-cont: #000000;
+  --color-text-secondary-cont: #404040;
+
+  /* Accent Colors */
+  --color-bt-gray: #525252;
+  --color-accent: #a855f7;
+  --color-success: #10b981;
+  --color-approve: #06b6d4;
+  --color-alert: #f59e0b;
+  --color-danger: #ef4444;
+}
+
+.light {
+  --color-bg-primary: #f8faff;
+  --color-bg-secondary: #eef2ff;
+  --color-bg-three: #e0e7ff;
+  --color-bg-hover: #dbeafe;
+  --color-bg-primary-cont: #0b1020;
+  --color-bg-secondary-cont: #111936;
+  --color-bg-hover-cont: #a5b4fc;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-third: #475569;
+  --color-text-primary-cont: #eef2ff;
+  --color-text-secondary-cont: #c7d2fe;
+
+  --color-bt-gray: #64748b;
+  --color-accent: #7c3aed;
+  --color-success: #0284c7;
+  --color-approve: #0ea5e9;
+  --color-alert: #ffa700;
+  --color-danger: #e11d48;
+}
+
+.glob-trans {
+  transition: all 0.3s ease-in-out;
+}
+
+/* True Black Vercel Aesthetic - Global Enhancements */
+html, body {
+  background: linear-gradient(135deg, #0b0e14 0%, #1a1d26 25%, #0f1218 50%, #1a1d26 75%, #0b0e14 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+html.dark, body.dark {
+  background: linear-gradient(135deg, #0b0e14 0%, #1a1d26 25%, #0f1218 50%, #1a1d26 75%, #0b0e14 100%);
+  background-attachment: fixed;
+}
+
+/* Gradiente radial para base de productos */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+}
+
+/* Custom scrollbar for True Black theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+/* Selection & Highlight */
+::selection {
+  background-color: #a855f7;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #a855f7;
+  color: #ffffff;
+}
+
+/* Link hover effect */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #a855f7;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+  border-color: #a855f7 !important;
+}
+
+.sidebar {
+  transition: all 0.5s ease-in-out;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+/* animation-diretion: reverse ;
+    because to triiger animation more than twice we need two diffrent animation clip
+    so there is 4 animation clip over all for side bar
+    2 for Fa sidebar and 2 for En side bar */
+.sidebar-right {
+  animation-name: roundright;
+}
+@keyframes roundright {
+  from {
+    border-radius: 0 0 999px 0;
+  }
+  to {
+    border-radius: 0;
+  }
+}
+.sidebar-right-reverse {
+  animation-name: roundrightreverse;
+}
+@keyframes roundrightreverse {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 0 0 999px 0;
+  }
+}
+.sidebar-left {
+  animation-name: roundleft;
+}
+@keyframes roundleft {
+  from {
+    border-radius: 0 0 0 999px;
+  }
+  to {
+    border-radius: 0;
+  }
+}
+.sidebar-left-reverse {
+  animation-name: roundleftreverse;
+}
+@keyframes roundleftreverse {
+  from {
+    border-radius: 0;
+  }
+  to {
+    border-radius: 0 0 0 999px;
+  }
+}
+
+.navbar {
+  background: inherit;
+  backdrop-filter: blur(5px);
+}
